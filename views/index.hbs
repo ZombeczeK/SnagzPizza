@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SnagzPizza</title>
+  <style>
+    h1 {
+      color: red;
+    }
+    body {
+      background-color: gray;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    form {
+      width: 80%;
+      font-size: 150%;
+      margin-bottom: 20px;
+    }
+    #pizza-image {
+      width: 300px;
+      height: 300px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <h1>Witaj w SnagzPizza! Zrób swoją pizzę!</h1>
+  <form id="pizza-form" method="POST" action="/SnagzPizza">
+  <input type="checkbox" name="s" value="Pizza_ciasto" onclick="updatePizzaImage()">Ciasto<br>
+    <input type="checkbox" name="s" value="Pizza_ser" onclick="updatePizzaImage()">Ser żółty<br>
+    <input type="checkbox" name="s" value="Pizza_sosPOM" onclick="updatePizzaImage()">Sos pomidorowy<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_pieczarka" onclick="updatePizzaImage()">Pieczarki<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_pomidor" onclick="updatePizzaImage()">Pomidor<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_cebula" onclick="updatePizzaImage()">Cebula<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_ogórek" onclick="updatePizzaImage()">Ogórek<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_jalapeno" onclick="updatePizzaImage()">Jalapeno<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_papryka" onclick="updatePizzaImage()">Papryka<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_boczek" onclick="updatePizzaImage()">Bekon<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_oliwka" onclick="updatePizzaImage()">Oliwka<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_salami" onclick="updatePizzaImage()">Salami<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_szynka" onclick="updatePizzaImage()">Szynka<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_kurczak" onclick="updatePizzaImage()">Kurczak<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_ananas" onclick="updatePizzaImage()">Ananas<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_krewetka" onclick="updatePizzaImage()">Krewetki<br>
+    <input type="checkbox" name="s" value="Pizza_skladnik_kebab" onclick="updatePizzaImage()">Kebab<br>
+    <input type="checkbox" name="s" value="Pizza_sos_ostry" onclick="updatePizzaImage()">Sos ostry<br>
+    <input type="checkbox" name="s" value="Pizza_sos_czosnkowy" onclick="updatePizzaImage()">Sos czosnkowy<br>
+    <br>
+    <input type="text" name="deliveryAddress" placeholder="Adres dostawy"><br><br>
+    <button type="submit">Zamów</button>
+  </form>
+  <div id="pizza-image"></div>
+
+  <script>
+    function updatePizzaImage() {
+      const checkboxes = document.querySelectorAll('input[name="s"]:checked');
+      const pizzaImage = document.getElementById('pizza-image');
+      let ingredients = [];
+      checkboxes.forEach((checkbox) => {
+        ingredients.push(checkbox.value);
+      });
+
+      // Construct the background image URLs
+      const backgroundImageUrls = ingredients.map(ingredient => `url('/${ingredient}.svg')`).join(', ');
+
+      // Apply the background images
+      pizzaImage.style.backgroundImage = backgroundImageUrls;
+    }
+  </script>
+</body>
+</html>
