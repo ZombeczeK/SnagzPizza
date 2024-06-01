@@ -1,14 +1,22 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { PizzaModule } from './SnagzPizza/pizza.module';
-import { UserModule } from './user/user.module';
-import { AuthModule } from './auth/auth.module';
-import { UsersModule } from './users/users.module';
+import { Ingredient } from './SnagzPizza/ingredient.entity';
+import { PizzaOrder } from './SnagzPizza/pizza-order.entity';
 
 @Module({
-  imports: [PizzaModule, UserModule, AuthModule, UsersModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'snagzuser',
+      password: 'password',
+      database: 'snagzpizza',
+      entities: [Ingredient, PizzaOrder],
+      synchronize: true,
+    }),
+    PizzaModule,
+  ],
 })
 export class AppModule {}

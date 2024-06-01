@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SnagzPizza - Podsumowanie</title>
+</head>
+<body>
+  <h1>{{message}}</h1>
+  <p>Twoje zamówienie zostało przyjęte.</p>
+  <h2>Szczegóły zamówienia:</h2>
+  <ul>
+    <li>ID zamówienia: {{order.id}}</li>
+    <li>Adres dostawy: {{order.deliveryAddress}}</li>
+    <li>Nazwa użytkownika: {{order.username}}</li>
+    <li>Składniki:
+      <ul>
+        {{#each order.ingredients}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </li>
+  </ul>
+  <a href="/SnagzPizza">Złóż kolejne zamówienie</a>
+</body>
+</html>
