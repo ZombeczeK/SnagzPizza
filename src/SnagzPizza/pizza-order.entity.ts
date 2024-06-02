@@ -13,4 +13,8 @@ export class PizzaOrder {
 
   @Column()
   username: string;
+
+  // Zakomentuj lub usuń poniższe linie, jeśli nie używasz związku `user`
+  // @ManyToOne(() => User, user => user.orders)
+  // user: User;
 }
