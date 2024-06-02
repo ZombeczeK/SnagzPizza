@@ -3,6 +3,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { PizzaModule } from './SnagzPizza/pizza.module';
 import { Ingredient } from './SnagzPizza/ingredient.entity';
 import { PizzaOrder } from './SnagzPizza/pizza-order.entity';
+import { AuthModule } from './user/auth.module';
+import { User } from './user/user.entity';
+
 
 @Module({
   imports: [
@@ -13,10 +16,11 @@ import { PizzaOrder } from './SnagzPizza/pizza-order.entity';
       username: 'snagzuser',
       password: 'password',
       database: 'snagzpizza',
-      entities: [Ingredient, PizzaOrder],
+      entities: [Ingredient, PizzaOrder, User],
       synchronize: true,
     }),
     PizzaModule,
+    AuthModule,
   ],
 })
 export class AppModule {}

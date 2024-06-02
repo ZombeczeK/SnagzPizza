@@ -18,7 +18,7 @@ export class PizzaController {
   async createPizza(@Body() pizzaData: { s: string[], deliveryAddress: string, username: string }) {
     const ingredients = pizzaData.s;
     const deliveryAddress = pizzaData.deliveryAddress || "Domyślny Adres";
-    const username = pizzaData.username || "Anonimowy";
+    const username = pizzaData.username || "lubek";
     const newOrder = await this.pizzaService.createPizza(ingredients, deliveryAddress, username);
     return { order: newOrder };
   }
