@@ -49,16 +49,16 @@
 <ul>
 <li>Po pobraniu PostgreSQL wykorzystujemy dane pliku <code>ormconifg.json</code> by połączyć bazę danych z aplikacją:</li>
 </ul>
-<pre><code>{
-"type": "postgres",
-"host": "localhost",
-"port": 5432,
-"username": "snagzuser",
-"password": "password",
-"database": "snagzpizza",
-"entities": ["dist/**/*.entity{.ts,.js}"],
-"synchronize": true
-}
+<pre class=" language-ts"><code class="prism  language-ts"><span class="token punctuation">{</span>
+<span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"postgres"</span><span class="token punctuation">,</span>
+<span class="token string">"host"</span><span class="token punctuation">:</span> <span class="token string">"localhost"</span><span class="token punctuation">,</span>
+<span class="token string">"port"</span><span class="token punctuation">:</span> <span class="token number">5432</span><span class="token punctuation">,</span>
+<span class="token string">"username"</span><span class="token punctuation">:</span> <span class="token string">"snagzuser"</span><span class="token punctuation">,</span>
+<span class="token string">"password"</span><span class="token punctuation">:</span> <span class="token string">"password"</span><span class="token punctuation">,</span>
+<span class="token string">"database"</span><span class="token punctuation">:</span> <span class="token string">"snagzpizza"</span><span class="token punctuation">,</span>
+<span class="token string">"entities"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"dist/**/*.entity{.ts,.js}"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token string">"synchronize"</span><span class="token punctuation">:</span> <span class="token keyword">true</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>Najważniejsze żeby<br>
 <strong>host</strong><br>
@@ -117,9 +117,26 @@ były zgodne w aplikacji jak i w bazie danych.</p>
 <h3 id="ormconfig.json">ormconfig.json</h3>
 <p>Kod jest konfiguracją połączenia z bazą danych PostgreSQL w aplikacji.</p>
 <h2 id="przykłady">Przykłady</h2>
-<ul>
-<li><strong>To Karol jest tu potrzebny bo jemu to działa</strong></li>
-</ul>
+<h3 id="uruchamianie-aplikacji">Uruchamianie aplikacji</h3>
+<p>development</p>
+<pre class=" language-bash"><code class="prism  language-bash">$ <span class="token function">npm</span> run start
+</code></pre>
+<p>watch mode</p>
+<pre class=" language-bash"><code class="prism  language-bash">$ <span class="token function">npm</span> run start:dev
+</code></pre>
+<p>production mode</p>
+<pre class=" language-bash"><code class="prism  language-bash">$ <span class="token function">npm</span> run start:prod
+</code></pre>
+<h3 id="test">Test</h3>
+<p>unit tests</p>
+<pre class=" language-bash"><code class="prism  language-bash">$ <span class="token function">npm</span> run <span class="token function">test</span>
+</code></pre>
+<p>e2e tests</p>
+<pre class=" language-bash"><code class="prism  language-bash">$ <span class="token function">npm</span> run test:e2e
+</code></pre>
+<p>test coverage</p>
+<pre class=" language-bash"><code class="prism  language-bash">$ <span class="token function">npm</span> run test:cov
+</code></pre>
 <h2 id="twórcy">Twórcy</h2>
 <ul>
 <li>Piotr Ernest</li>
