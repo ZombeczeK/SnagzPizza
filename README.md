@@ -3,7 +3,7 @@
 
 ---
 
-<h1 id="coś">coś</h1>
+<h1 id="snagzpizza---dokumentacja">SnagzPizza - Dokumentacja</h1>
 <h1 id="struktura-dokumentacji">Struktura Dokumentacji</h1>
 <h2 id="wprowadzenie">Wprowadzenie</h2>
 <p><strong>SnagzPizza</strong> to framework dedykowany do zarządzania pizzerią. Nasze narzędzie umożliwia łatwe tworzenie i zarządzanie menu pizzerii oraz oferuje klientom możliwość komponowania własnej pizzy, wybierając z gamy dostępnych składników. Framework ma również możliwość tworzenie nowych użytkowników i logowanie już zarejestrowanych. SnagzPizza jest idealnym rozwiązaniem dla właścicieli pizzerii, którzy chcą usprawnić swoje operacje i zaoferować klientom unikalne doświadczenie.</p>
