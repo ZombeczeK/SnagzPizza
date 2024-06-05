@@ -3,112 +3,129 @@
 
 ---
 
-<h1 id="welcome-to-stackedit">Welcome to StackEdit!</h1>
-<p>Hi! I’m your first Markdown file in <strong>StackEdit</strong>. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the <strong>file explorer</strong> on the left corner of the navigation bar.</p>
-<h1 id="files">Files</h1>
-<p>StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible <strong>offline!</strong></p>
-<h2 id="create-files-and-folders">Create files and folders</h2>
-<p>The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the <strong>New file</strong> button in the file explorer. You can also create folders by clicking the <strong>New folder</strong> button.</p>
-<h2 id="switch-to-another-file">Switch to another file</h2>
-<p>All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.</p>
-<h2 id="rename-a-file">Rename a file</h2>
-<p>You can rename the current file by clicking the file name in the navigation bar or by clicking the <strong>Rename</strong> button in the file explorer.</p>
-<h2 id="delete-a-file">Delete a file</h2>
-<p>You can delete the current file by clicking the <strong>Remove</strong> button in the file explorer. The file will be moved into the <strong>Trash</strong> folder and automatically deleted after 7 days of inactivity.</p>
-<h2 id="export-a-file">Export a file</h2>
-<p>You can export the current file by clicking <strong>Export to disk</strong> in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.</p>
-<h1 id="synchronization">Synchronization</h1>
-<p>Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your <strong>Google Drive</strong>, your <strong>Dropbox</strong> and your <strong>GitHub</strong> accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow… The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.</p>
-<p>There are two types of synchronization and they can complement each other:</p>
+<h1 id="coś">coś</h1>
+<h1 id="struktura-dokumentacji">Struktura Dokumentacji</h1>
+<h2 id="wprowadzenie">Wprowadzenie</h2>
+<p><strong>SnagzPizza</strong> to framework dedykowany do zarządzania pizzerią. Nasze narzędzie umożliwia łatwe tworzenie i zarządzanie menu pizzerii oraz oferuje klientom możliwość komponowania własnej pizzy, wybierając z gamy dostępnych składników. Framework ma również możliwość tworzenie nowych użytkowników i logowanie już zarejestrowanych. SnagzPizza jest idealnym rozwiązaniem dla właścicieli pizzerii, którzy chcą usprawnić swoje operacje i zaoferować klientom unikalne doświadczenie.</p>
+<h2 id="podstawy">Podstawy</h2>
+<p>W frameworku są zawarte:</p>
 <ul>
-<li>
-<p>The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.</p>
-<blockquote>
-<p>To start syncing your workspace, just sign in with Google in the menu.</p>
-</blockquote>
-</li>
-<li>
-<p>The file synchronization will keep one file of the workspace synced with one or multiple files in <strong>Google Drive</strong>, <strong>Dropbox</strong> or <strong>GitHub</strong>.</p>
-<blockquote>
-<p>Before starting to sync files, you must link an account in the <strong>Synchronize</strong> sub-menu.</p>
-</blockquote>
-</li>
+<li>moduł logowania,</li>
+<li>menu pizzy,</li>
+<li>kreator pizzy dla zalogowanego użytkownika,</li>
+<li>baza danych przechowująca zamówienia i użytkowników</li>
 </ul>
-<h2 id="open-a-file">Open a file</h2>
-<p>You can open a file from <strong>Google Drive</strong>, <strong>Dropbox</strong> or <strong>GitHub</strong> by opening the <strong>Synchronize</strong> sub-menu and clicking <strong>Open from</strong>. Once opened in the workspace, any modification in the file will be automatically synced.</p>
-<h2 id="save-a-file">Save a file</h2>
-<p>You can save any file of the workspace to <strong>Google Drive</strong>, <strong>Dropbox</strong> or <strong>GitHub</strong> by opening the <strong>Synchronize</strong> sub-menu and clicking <strong>Save on</strong>. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.</p>
-<h2 id="synchronize-a-file">Synchronize a file</h2>
-<p>Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.</p>
-<p>If you just have modified your file and you want to force syncing, click the <strong>Synchronize now</strong> button in the navigation bar.</p>
-<blockquote>
-<p><strong>Note:</strong> The <strong>Synchronize now</strong> button is disabled if you have no file to synchronize.</p>
-</blockquote>
-<h2 id="manage-file-synchronization">Manage file synchronization</h2>
-<p>Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking <strong>File synchronization</strong> in the <strong>Synchronize</strong> sub-menu. This allows you to list and remove synchronized locations that are linked to your file.</p>
-<h1 id="publication">Publication</h1>
-<p>Publishing in StackEdit makes it simple for you to publish online your files. Once you’re happy with a file, you can publish it to different hosting platforms like <strong>Blogger</strong>, <strong>Dropbox</strong>, <strong>Gist</strong>, <strong>GitHub</strong>, <strong>Google Drive</strong>, <strong>WordPress</strong> and <strong>Zendesk</strong>. With <a href="http://handlebarsjs.com/">Handlebars templates</a>, you have full control over what you export.</p>
-<blockquote>
-<p>Before starting to publish, you must link an account in the <strong>Publish</strong> sub-menu.</p>
-</blockquote>
-<h2 id="publish-a-file">Publish a File</h2>
-<p>You can publish your file by opening the <strong>Publish</strong> sub-menu and by clicking <strong>Publish to</strong>. For some locations, you can choose between the following formats:</p>
+<h3 id="komponenty">Komponenty</h3>
 <ul>
-<li>Markdown: publish the Markdown text on a website that can interpret it (<strong>GitHub</strong> for instance),</li>
-<li>HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).</li>
+<li>Frontend i Backend to NestJS</li>
+<li>Baza danych to PostgreSQL</li>
 </ul>
-<h2 id="update-a-publication">Update a publication</h2>
-<p>After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the <strong>Publish now</strong> button in the navigation bar.</p>
+<h2 id="instalacja">Instalacja</h2>
+<ul>
+<li>instalujemy Node.js ze strony</li>
+</ul>
 <blockquote>
-<p><strong>Note:</strong> The <strong>Publish now</strong> button is disabled if your file has not been published yet.</p>
+<p><a href="https://nodejs.org/en">https://nodejs.org/en</a></p>
 </blockquote>
-<h2 id="manage-file-publication">Manage file publication</h2>
-<p>Since one file can be published to multiple locations, you can list and manage publish locations by clicking <strong>File publication</strong> in the <strong>Publish</strong> sub-menu. This allows you to list and remove publication locations that are linked to your file.</p>
-<h1 id="markdown-extensions">Markdown extensions</h1>
-<p>StackEdit extends the standard Markdown syntax by adding extra <strong>Markdown extensions</strong>, providing you with some nice features.</p>
+<ul>
+<li>następnie pobieramy ZIP z gotowym frameworkiem <strong>SnagzPizza</strong></li>
+</ul>
 <blockquote>
-<p><strong>ProTip:</strong> You can disable any <strong>Markdown extension</strong> in the <strong>File properties</strong> dialog.</p>
+<p><a href="https://github.com/ZombeczeK/SnagzPizza">https://github.com/ZombeczeK/SnagzPizza</a></p>
 </blockquote>
-<h2 id="smartypants">SmartyPants</h2>
-<p>SmartyPants converts ASCII punctuation characters into “smart” typographic punctuation HTML entities. For example:</p>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th>ASCII</th>
-<th>HTML</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Single backticks</td>
-<td><code>'Isn't this fun?'</code></td>
-<td>‘Isn’t this fun?’</td>
-</tr>
-<tr>
-<td>Quotes</td>
-<td><code>"Isn't this fun?"</code></td>
-<td>“Isn’t this fun?”</td>
-</tr>
-<tr>
-<td>Dashes</td>
-<td><code>-- is en-dash, --- is em-dash</code></td>
-<td>– is en-dash, — is em-dash</td>
-</tr>
-</tbody>
-</table><h2 id="katex">KaTeX</h2>
-<p>You can render LaTeX mathematical expressions using <a href="https://khan.github.io/KaTeX/">KaTeX</a>:</p>
-<p>The <em>Gamma function</em> satisfying <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Γ</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">!</mo><mspace width="1em"></mspace><mi mathvariant="normal">∀</mi><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">N</mi></mrow><annotation encoding="application/x-tex">\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">Γ</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">1</span><span class="mclose">)!</span><span class="mspace" style="margin-right: 1em;"></span><span class="mord">∀</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.68889em; vertical-align: 0em;"></span><span class="mord mathbb">N</span></span></span></span></span> is via the Euler integral</p>
-<p><span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">Γ</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>=</mo><msubsup><mo>∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><msup><mi>t</mi><mrow><mi>z</mi><mo>−</mo><mn>1</mn></mrow></msup><msup><mi>e</mi><mrow><mo>−</mo><mi>t</mi></mrow></msup><mi>d</mi><mi>t</mi> <mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">Γ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right: 0.04398em;">z</span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 2.32624em; vertical-align: -0.91195em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right: 0.44445em; position: relative; top: -0.001125em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.41429em;"><span class="" style="top: -1.78805em; margin-left: -0.44445em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span class="" style="top: -3.8129em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.91195em;"><span class=""></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.864108em;"><span class="" style="top: -3.113em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right: 0.04398em;">z</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.843556em;"><span class="" style="top: -3.113em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord">.</span></span></span></span></span></span></p>
+<ul>
+<li>Otwieramy folder w edytorze np. Visual Studio Code a potem wpisujemy komendę w terminalu:</li>
+</ul>
+<pre class=" language-bash"><code class="prism  language-bash">$ <span class="token function">npm</span> i -g @nestjs/cli
+</code></pre>
 <blockquote>
-<p>You can find more information about <strong>LaTeX</strong> mathematical expressions <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">here</a>.</p>
+<p>Komenda pozwala nam zainstalować framework <strong>NestJS</strong> który jest wymagany do poprawnego działania frameworka</p>
 </blockquote>
-<h2 id="uml-diagrams">UML diagrams</h2>
-<p>You can render UML diagrams using <a href="https://mermaidjs.github.io/">Mermaid</a>. For example, this will produce a sequence diagram:</p>
-<pre class=" language-mermaid"><svg id="mermaid-svg-5QWTFS2w01mugTJw" width="100%" xmlns="http://www.w3.org/2000/svg" height="543" style="max-width: 814px;" viewBox="-50 -10 814 543"><style>#mermaid-svg-5QWTFS2w01mugTJw{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}#mermaid-svg-5QWTFS2w01mugTJw .error-icon{fill:#552222;}#mermaid-svg-5QWTFS2w01mugTJw .error-text{fill:#552222;stroke:#552222;}#mermaid-svg-5QWTFS2w01mugTJw .edge-thickness-normal{stroke-width:2px;}#mermaid-svg-5QWTFS2w01mugTJw .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg-5QWTFS2w01mugTJw .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg-5QWTFS2w01mugTJw .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg-5QWTFS2w01mugTJw .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg-5QWTFS2w01mugTJw .marker{fill:#666;stroke:#666;}#mermaid-svg-5QWTFS2w01mugTJw .marker.cross{stroke:#666;}#mermaid-svg-5QWTFS2w01mugTJw svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg-5QWTFS2w01mugTJw .actor{stroke:hsl(0,0%,83%);fill:#eee;}#mermaid-svg-5QWTFS2w01mugTJw text.actor > tspan{fill:#333;stroke:none;}#mermaid-svg-5QWTFS2w01mugTJw .actor-line{stroke:#666;}#mermaid-svg-5QWTFS2w01mugTJw .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:#333;}#mermaid-svg-5QWTFS2w01mugTJw .messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:#333;}#mermaid-svg-5QWTFS2w01mugTJw #arrowhead path{fill:#333;stroke:#333;}#mermaid-svg-5QWTFS2w01mugTJw .sequenceNumber{fill:white;}#mermaid-svg-5QWTFS2w01mugTJw #sequencenumber{fill:#333;}#mermaid-svg-5QWTFS2w01mugTJw #crosshead path{fill:#333;stroke:#333;}#mermaid-svg-5QWTFS2w01mugTJw .messageText{fill:#333;stroke:#333;}#mermaid-svg-5QWTFS2w01mugTJw .labelBox{stroke:hsl(0,0%,83%);fill:#eee;}#mermaid-svg-5QWTFS2w01mugTJw .labelText,#mermaid-svg-5QWTFS2w01mugTJw .labelText > tspan{fill:#333;stroke:none;}#mermaid-svg-5QWTFS2w01mugTJw .loopText,#mermaid-svg-5QWTFS2w01mugTJw .loopText > tspan{fill:#333;stroke:none;}#mermaid-svg-5QWTFS2w01mugTJw .loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:hsl(0,0%,83%);fill:hsl(0,0%,83%);}#mermaid-svg-5QWTFS2w01mugTJw .note{stroke:hsl(60,100%,23.3333333333%);fill:#ffa;}#mermaid-svg-5QWTFS2w01mugTJw .noteText,#mermaid-svg-5QWTFS2w01mugTJw .noteText > tspan{fill:#333;stroke:none;}#mermaid-svg-5QWTFS2w01mugTJw .activation0{fill:#f4f4f4;stroke:#666;}#mermaid-svg-5QWTFS2w01mugTJw .activation1{fill:#f4f4f4;stroke:#666;}#mermaid-svg-5QWTFS2w01mugTJw .activation2{fill:#f4f4f4;stroke:#666;}#mermaid-svg-5QWTFS2w01mugTJw:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#mermaid-svg-5QWTFS2w01mugTJw sequence{fill:apa;}</style><g></g><g><line id="actor6" x1="75" y1="5" x2="75" y2="532" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="75" dy="0">Alice</tspan></text></g><g><line id="actor7" x1="318" y1="5" x2="318" y2="532" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="243" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="318" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="318" dy="0">Bob</tspan></text></g><g><line id="actor8" x1="539" y1="5" x2="539" y2="532" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="464" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="539" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="539" dy="0">John</tspan></text></g><defs><marker id="arrowhead" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs><defs><marker id="crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="16" refY="4"><path fill="black" stroke="#000000" stroke-width="1px" d="M 9,2 V 6 L16,4 Z" style="stroke-dasharray: 0, 0;"></path><path fill="none" stroke="#000000" stroke-width="1px" d="M 0,1 L 6,7 M 6,1 L 0,7" style="stroke-dasharray: 0, 0;"></path></marker></defs><defs><marker id="filled-head" refX="18" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><defs><marker id="sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40" orient="auto"><circle cx="15" cy="15" r="6"></circle></marker></defs><text x="197" y="80" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Hello Bob, how are you?</text><line x1="75" y1="113" x2="318" y2="113" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="fill: none;"></line><text x="429" y="128" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">How about you John?</text><line x1="318" y1="161" x2="539" y2="161" class="messageLine1" stroke-width="2" stroke="none" marker-end="url(#arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line><text x="197" y="176" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">I am good thanks!</text><line x1="318" y1="209" x2="75" y2="209" class="messageLine1" stroke-width="2" stroke="none" marker-end="url(#crosshead)" style="stroke-dasharray: 3, 3; fill: none;"></line><text x="429" y="224" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">I am good thanks!</text><line x1="318" y1="257" x2="539" y2="257" class="messageLine0" stroke-width="2" stroke="none" marker-end="url(#crosshead)" style="fill: none;"></line><g><rect x="564" y="267" fill="#EDF2AE" stroke="#666" width="150" height="84" rx="0" ry="0" class="note"></rect><text x="639" y="272" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="639">Bob thinks a long</tspan></text><text x="639" y="288" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="639">long time, so long</tspan></text><text x="639" y="304" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="639">that the text does</tspan></text><text x="639" y="320" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 14px; font-weight: 400;"><tspan x="639">not fit on a row.</tspan></text></g><text x="197" y="366" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Checking with John...</text><line x1="318" y1="399" x2="75" y2="399" class="messageLine1" stroke-width="2" stroke="none" style="stroke-dasharray: 3, 3; fill: none;"></line><text x="307" y="414" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;trebuchet ms&quot;, verdana, arial, sans-serif; font-size: 16px; font-weight: 400;">Yes... John, how are you?</text><line x1="75" y1="447" x2="539" y2="447" class="messageLine0" stroke-width="2" stroke="none" style="fill: none;"></line><g><rect x="0" y="467" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="499.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="75" dy="0">Alice</tspan></text></g><g><rect x="243" y="467" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="318" y="499.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="318" dy="0">Bob</tspan></text></g><g><rect x="464" y="467" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="539" y="499.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-weight: 400; font-family: Open-Sans, &quot;sans-serif&quot;;"><tspan x="539" dy="0">John</tspan></text></g></svg></pre>
-<p>And this will produce a flow chart:</p>
-<pre class=" language-mermaid"><svg id="mermaid-svg-88ZXbkpXCFhiF0oP" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="174.4375" style="max-width: 502.75px;" viewBox="0 0 502.75 174.4375"><style>#mermaid-svg-88ZXbkpXCFhiF0oP{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#000000;}#mermaid-svg-88ZXbkpXCFhiF0oP .error-icon{fill:#552222;}#mermaid-svg-88ZXbkpXCFhiF0oP .error-text{fill:#552222;stroke:#552222;}#mermaid-svg-88ZXbkpXCFhiF0oP .edge-thickness-normal{stroke-width:2px;}#mermaid-svg-88ZXbkpXCFhiF0oP .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg-88ZXbkpXCFhiF0oP .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg-88ZXbkpXCFhiF0oP .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg-88ZXbkpXCFhiF0oP .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg-88ZXbkpXCFhiF0oP .marker{fill:#666;stroke:#666;}#mermaid-svg-88ZXbkpXCFhiF0oP .marker.cross{stroke:#666;}#mermaid-svg-88ZXbkpXCFhiF0oP svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg-88ZXbkpXCFhiF0oP .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#000000;}#mermaid-svg-88ZXbkpXCFhiF0oP .cluster-label text{fill:#333;}#mermaid-svg-88ZXbkpXCFhiF0oP .cluster-label span{color:#333;}#mermaid-svg-88ZXbkpXCFhiF0oP .label text,#mermaid-svg-88ZXbkpXCFhiF0oP span{fill:#000000;color:#000000;}#mermaid-svg-88ZXbkpXCFhiF0oP .node rect,#mermaid-svg-88ZXbkpXCFhiF0oP .node circle,#mermaid-svg-88ZXbkpXCFhiF0oP .node ellipse,#mermaid-svg-88ZXbkpXCFhiF0oP .node polygon,#mermaid-svg-88ZXbkpXCFhiF0oP .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-svg-88ZXbkpXCFhiF0oP .node .label{text-align:center;}#mermaid-svg-88ZXbkpXCFhiF0oP .node.clickable{cursor:pointer;}#mermaid-svg-88ZXbkpXCFhiF0oP .arrowheadPath{fill:#333333;}#mermaid-svg-88ZXbkpXCFhiF0oP .edgePath .path{stroke:#666;stroke-width:1.5px;}#mermaid-svg-88ZXbkpXCFhiF0oP .flowchart-link{stroke:#666;fill:none;}#mermaid-svg-88ZXbkpXCFhiF0oP .edgeLabel{background-color:white;text-align:center;}#mermaid-svg-88ZXbkpXCFhiF0oP .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-svg-88ZXbkpXCFhiF0oP .cluster rect{fill:hsl(210,66.6666666667%,95%);stroke:#26a;stroke-width:1px;}#mermaid-svg-88ZXbkpXCFhiF0oP .cluster text{fill:#333;}#mermaid-svg-88ZXbkpXCFhiF0oP .cluster span{color:#333;}#mermaid-svg-88ZXbkpXCFhiF0oP div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(-160,0%,93.3333333333%);border:1px solid #26a;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-svg-88ZXbkpXCFhiF0oP:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#mermaid-svg-88ZXbkpXCFhiF0oP flowchart{fill:apa;}</style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-A LE-B" style="opacity: 1;" id="L-A-B"><path class="path" d="M109.66244612068965,67.609375L170.0546875,38.859375L246.125,38.859375" marker-end="url(https://stackedit.io/app#arrowhead9)" style="fill:none"></path><defs><marker id="arrowhead9" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-A LE-C" style="opacity: 1;" id="L-A-C"><path class="path" d="M109.66244612068965,114.328125L170.0546875,143.078125L226.921875,143.078125" marker-end="url(https://stackedit.io/app#arrowhead10)" style="fill:none"></path><defs><marker id="arrowhead10" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-B LE-D" style="opacity: 1;" id="L-B-D"><path class="path" d="M307.84375,38.859375L352.046875,38.859375L400.1027516807447,68.9128733192553" marker-end="url(https://stackedit.io/app#arrowhead11)" style="fill:none"></path><defs><marker id="arrowhead11" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-C LE-D" style="opacity: 1;" id="L-C-D"><path class="path" d="M327.046875,143.078125L352.046875,143.078125L400.1027516807447,114.0246266807447" marker-end="url(https://stackedit.io/app#arrowhead12)" style="fill:none"></path><defs><marker id="arrowhead12" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform="translate(170.0546875,38.859375)"><g transform="translate(-31.8671875,-13.359375)" class="label"><rect rx="0" ry="0" width="63.734375" height="26.71875"></rect><foreignObject width="63.734375" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-A-B" class="edgeLabel L-LS-A' L-LE-B">Link text</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-A-C" class="edgeLabel L-LS-A' L-LE-C"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-B-D" class="edgeLabel L-LS-B' L-LE-D"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-C-D" class="edgeLabel L-LS-C' L-LE-D"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" style="opacity: 1;" id="flowchart-A-40" transform="translate(60.59375,90.96875)"><rect rx="0" ry="0" x="-52.59375" y="-23.359375" width="105.1875" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-42.59375,-13.359375)"><foreignObject width="85.1875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Square Rect</div></foreignObject></g></g></g><g class="node default" style="opacity: 1;" id="flowchart-B-41" transform="translate(276.984375,38.859375)"><circle x="-30.859375" y="-23.359375" r="30.859375" class="label-container"></circle><g class="label" transform="translate(0,0)"><g transform="translate(-20.859375,-13.359375)"><foreignObject width="41.71875" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Circle</div></foreignObject></g></g></g><g class="node default" style="opacity: 1;" id="flowchart-C-43" transform="translate(276.984375,143.078125)"><rect rx="5" ry="5" x="-50.0625" y="-23.359375" width="100.125" height="46.71875" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-40.0625,-13.359375)"><foreignObject width="80.125" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Round Rect</div></foreignObject></g></g></g><g class="node default" style="opacity: 1;" id="flowchart-D-45" transform="translate(435.8984375,90.96875)"><polygon points="58.8515625,0 117.703125,-58.8515625 58.8515625,-117.703125 0,-58.8515625" transform="translate(-58.8515625,58.8515625)" class="label-container"></polygon><g class="label" transform="translate(0,0)"><g transform="translate(-32.03125,-13.359375)"><foreignObject width="64.0625" height="26.71875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Rhombus</div></foreignObject></g></g></g></g></g></g></svg></pre>
+<ul>
+<li>Instalujemy Baze danych ze strony</li>
+</ul>
+<blockquote>
+<p><a href="https://www.postgresql.org">https://www.postgresql.org</a></p>
+</blockquote>
+<ul>
+<li>Po pobraniu PostgreSQL wykorzystujemy dane pliku <code>ormconifg.json</code> by połączyć bazę danych z aplikacją:</li>
+</ul>
+<pre><code>{
+"type": "postgres",
+"host": "localhost",
+"port": 5432,
+"username": "snagzuser",
+"password": "password",
+"database": "snagzpizza",
+"entities": ["dist/**/*.entity{.ts,.js}"],
+"synchronize": true
+}
+</code></pre>
+<p>Najważniejsze żeby<br>
+<strong>host</strong><br>
+<strong>port</strong><br>
+<strong>username</strong><br>
+<strong>password</strong><br>
+<strong>database</strong><br>
+były zgodne w aplikacji jak i w bazie danych.</p>
+<h2 id="przewodniki">Przewodniki</h2>
+<h2 id="api-reference">API Reference</h2>
+<p>Wyjaśnienie poszczególnych plików zawartych w frameworku</p>
+<h3 id="main.ts">main.ts</h3>
+<p>W kodzie tworzy się serwer HTTP przy użyciu frameworka NestJS, który używa Express jako platformy bazowej. Konfiguruje on katalog dla widoków i plików statycznych, ustawia silnik szablonów na Handlebars, a następnie uruchamia serwer nasłuchujący na porcie 8888.</p>
+<h3 id="app.service.ts">app.service.ts</h3>
+<p>Ten fragment kodu definiuje prosty serwis w aplikacji NestJS, który zwraca napis “Hello World!”. Serwis ten jest oznaczony dekoratorem <code>@Injectable()</code>, co pozwala na jego wstrzyknięcie jako zależności do innych komponentów aplikacji, takich jak kontrolery. Dzięki temu aplikacja jest modularna, łatwa do zarządzania i testowania.</p>
+<h3 id="app.module.ts">app.module.ts</h3>
+<p>Kod definiuje główny moduł aplikacji NestJS, który konfiguruje połączenie z bazą danych PostgreSQL za pomocą TypeORM oraz importuje dwa moduły: <code>PizzaModule</code> i <code>AuthModule</code>. Ten moduł centralizuje konfigurację aplikacji, co umożliwia łatwe zarządzanie różnymi częściami aplikacji i ich zależnościami.</p>
+<h3 id="app.controller.ts">app.controller.ts</h3>
+<p>To prosty przykład pokazujący podstawy tworzenia kontrolera w aplikacji NestJS i renderowania widoku z danymi dynamicznymi.</p>
+<h3 id="ingredient.entity.ts">ingredient.entity.ts</h3>
+<p>Kiedy ten kod zostanie wykonany w środowisku TypeORM, utworzy w bazie danych tabelę składników zawierającą trzy kolumny: id, name i imageUrl. Kolumna id będzie kluczem podstawowym i będzie automatycznie generować unikalne wartości dla nowych rekordów.</p>
+<h3 id="pizza-order.entity.ts">pizza-order.entity.ts</h3>
+<p>Podsumowując, klasa <code>PizzaOrder</code> reprezentuje zamówienie na pizzę z czterema kolumnami: <code>id</code>, <code>ingredients</code>, <code>deliveryAddress</code> i <code>username</code>. TypeORM używa dekoratorów, aby wskazać, które pola klasy odpowiadają kolumnom w tabeli bazy danych oraz jak te kolumny są zdefiniowane.</p>
+<h3 id="pizza-controller.ts">pizza-controller.ts</h3>
+<p>Kod używa dekoratorów NestJS, aby zdefiniować, jakie metody kontrolera obsługują konkretne typy żądań HTTP oraz jakie widoki mają być renderowane w odpowiedzi.</p>
+<h3 id="pizza.model.ts">pizza.model.ts</h3>
+<p>Interfejs <code>Pizza</code> definiuje obiekt, który ma trzy właściwości:</p>
+<ul>
+<li><code>id</code>: numer identyfikacyjny pizzy (liczba całkowita),</li>
+<li><code>ingredients</code>: tablica zawierająca składniki pizzy (każdy składnik to ciąg znaków),</li>
+<li><code>deliveryAddress</code>: adres dostawy pizzy (ciąg znaków).</li>
+</ul>
+<h3 id="pizza.module.ts">pizza.module.ts</h3>
+<p>Ten kod definiuje moduł <code>PizzaModule</code> w aplikacji NestJS, który:</p>
+<ul>
+<li>Importuje niezbędne encje bazy danych (<code>Ingredient</code> i <code>PizzaOrder</code>) przy użyciu <code>TypeOrmModule</code>.</li>
+<li>Rejestruje kontroler (<code>PizzaController</code>) do obsługi żądań HTTP związanych z pizzą.</li>
+<li>Rejestruje serwis (<code>PizzaService</code>) do wykonywania logiki biznesowej związanej z pizzą.</li>
+</ul>
+<h3 id="pizza.service.ts">pizza.service.ts</h3>
+<p>Klasa <code>PizzaService</code> zawiera dwie metody:</p>
+<ol>
+<li><code>getAllIngredients</code> - zwraca listę wszystkich dostępnych składników pizzy z bazy danych.</li>
+<li><code>createPizza</code> - tworzy nowe zamówienie pizzy na podstawie dostarczonych składników, adresu dostawy i nazwy użytkownika, a następnie zapisuje je w bazie danych.</li>
+</ol>
+<h3 id="auth.controller.ts">auth.controller.ts</h3>
+<p>Ten kontroler obsługuje interakcje użytkownika związane z uwierzytelnianiem, w tym wyświetlanie formularzy logowania i rejestracji, sprawdzanie poprawności danych i przekierowywanie użytkownika na odpowiednie strony.</p>
+<h3 id="auth.module.ts">auth.module.ts</h3>
+<p>Moduł ten stanowi integralną część aplikacji Nest.js, która obsługuje logikę autentykacji użytkowników przy użyciu TypeORM do dostępu do bazy danych.</p>
+<h3 id="auth.service.ts">auth.service.ts</h3>
+<p>Kod implementuje podstawową funkcjonalność autoryzacji w aplikacji, umożliwiając rejestrację nowych użytkowników i wyszukiwanie istniejących użytkowników na podstawie loginu.</p>
+<h3 id="user.entity.ts">user.entity.ts</h3>
+<p>Kod definiuje klasę <code>User</code>, która będzie mapowana do tabeli w bazie danych za pomocą TypeORM. Ta tabela będzie miała trzy kolumny: <code>id</code>, <code>login</code> i <code>haslo</code> (hasło). Kolumna <code>id</code> będzie kluczem głównym, a kolumna <code>login</code> będzie musiała przechowywać unikalne wartości.</p>
+<h3 id="user.service.ts">user.service.ts</h3>
+<p>Klasa <code>UserService</code> jest odpowiedzialna za interakcję z bazą danych w celu wykonania operacji związanych z użytkownikiem, takich jak wyszukiwanie użytkownika poprzez zalogowanie się i utworzenie nowego użytkownika. Wykorzystuje wzorzec repozytorium TypeORM do interakcji z bazą danych.</p>
+<h3 id="ormconfig.json">ormconfig.json</h3>
+<p>Kod jest konfiguracją połączenia z bazą danych PostgreSQL w aplikacji.</p>
+<h2 id="przykłady">Przykłady</h2>
+<ul>
+<li><strong>To Karol jest tu potrzebny bo jemu to działa</strong></li>
+</ul>
+<h2 id="twórcy">Twórcy</h2>
+<ul>
+<li>Piotr Ernest</li>
+<li>Filip Jurkiewicz</li>
+<li>Karol Koczwara</li>
+</ul>
+<h3 id="copyright-©-2024-mit-snagzpizza-by-koczwara-s.a.">Copyright © 2024 MIT <em>SnagzPizza</em> by <em>Koczwara S.A.</em></h3>
 
