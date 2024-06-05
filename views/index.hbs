@@ -3,23 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <title>SnagzPizza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Seymour+One&display=swap" rel="stylesheet">
   <style>
     h1 {
-      color: red;
+      color: rgb(209, 32, 32)(255, 0, 0);
+
     }
     body {
-      background-color: gray;
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 100vh;
       margin: 0;
       padding: 0;
+      font-family: "LXGW WenKai Mono TC", monospace;
+      font-weight: 400;
+      font-style: normal;
     }
     form {
       width: 80%;
       font-size: 150%;
       margin-bottom: 20px;
+    }
+    article{
+      background-color: #fcf9ed;
+      height: auto;
+      width: 100%; 
+      overflow: hidden; 
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='p' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Cpath data-color='outline' fill='none' stroke='%23FFFFFF' stroke-width='5' d='M0 0h100v50H0zM-50 50h100v50h-100zM50 50h100v50h-100z' data-darkreader-inline-stroke='' style='--darkreader-inline-stroke: %23e6e3df%3B'%3E%3C/path%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23p)' width='100%25' height='100%25'%3E%3C/rect%3E%3C/svg%3E");
+
+      background-size: cover; 
+      background-position: center;
+      background-repeat: no-repeat;
+   
     }
     #pizza-image {
       width: 70%;
@@ -29,19 +47,91 @@
       background-repeat: no-repeat;
       float: right;
       position: relative;
+
+    }
+    #upbar {
+      top: 0;
+      left: 0;
+      width: 100%;  
+      height: auto;
+      background-color: #75d65d;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='p' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Cg id='a' data-color='fill' fill='%2358B455' stroke='%2358B455' stroke-width='2.02' data-darkreader-inline-stroke='' style='--darkreader-inline-stroke: %23e6e3df%3B --darkreader-inline-fill: %23191b1d%3B' data-darkreader-inline-fill=''%3E%3Cpath d='M50-50h100V50H50z'%3E%3C/path%3E%3Cpath opacity='.5' d='M-50-50V50H50v100h100V-50z'%3E%3C/path%3E%3C/g%3E%3Cuse xlink:href='%23a' x='-200' y='200'%3E%3C/use%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23p)' width='100%25' height='100%25'%3E%3C/rect%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-bottom: 5px solid #f5e7cc;
+
+      display: flex; /* or use float: left; */
+      align-items: center;
+    }
+    #logo{
+      left: 20px;
+      width: 100px;
+      height: auto;
+      padding: 20px;
+      margin-left: 10px;
+    }
+    #upbar h1{
+      width: auto;
+      height: auto;
+      font-family: "Seymour One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    nav{
+      padding-left: 20px;
+    }
+    nav a {
+      padding-left: 10px;
     }
     #baner {
+      color: red;
       width: 100%;
-      float: left;
+      height: 10%;
+      float: top;
+      top: 0;
       text-align: center;
+      padding-top: 10px;
+      background-color: #f5e7cc;
+
+      font-family: "Seymour One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      border-bottom: 2px solid #e0d5be;
+      border-radius: 100px;
     }
+
     #checkbox {
-      width: 20%;
-      height: 70%;
-      position: fixed;
+      width: 275px;
+      height: auto;
       left: 0;
-      top: 10px;
-      margin: 100px;
+      
+      top: 25px;
+      margin-top: 40px;
+      margin-left: 50px;
+      margin-right: 100px;
+      background-color: #d0d18c;
+      padding: 20px;
+      padding-left: 30px;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      border-color: #d8c6aa;
+      border-radius: 30px; 
+    }
+    .PIZAcheckbox {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+    }
+    #adress_box{
+      height: 25px;
+      width: 200px;
+      margin: 10px;
+    }
+    #pizza_maker{
+      margin: 20px;
+
+      padding-bottom: 20px;
     }
     .ingredient {
       position: absolute;
@@ -66,56 +156,102 @@
     #Pizza_sos_czosnkowy {
       z-index: 3; /* Spicy and garlic sauces on top */
     }
+    footer {
+      background-color: #f5e7cc;
+      color: #333; 
+      text-align: center;
+      width: 100%;
+      height: 50px;
+      border-top: 1px solid #ddd;
+      bottom: 0;
+}
   </style>
 </head>
 <body>
-  <div id="baner">
-    <h1>Witaj w SnagzPizza! Zrób swoją pizzę!</h1>
+  
+  <div id="upbar">
+    <img id="logo" src="LOGO1.svg">
+    <h1>SnagzPizza</h1>
+    <nav>
+      <a href="URL">LINK1</a>
+      <a href="URL">LINK2</a>
+      <a href="URL">LINK3</a>
+    </nav>
   </div>
-  <div id="checkbox">
-    <form id="pizza-form" method="POST" action="/SnagzPizza">
-      <input type="checkbox" name="s" value="Pizza_ser" onclick="updatePizzaImage()">Ser żółty<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_pieczarka" onclick="updatePizzaImage()">Pieczarki<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_pomidor" onclick="updatePizzaImage()">Pomidor<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_cebula" onclick="updatePizzaImage()">Cebula<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_ogórek" onclick="updatePizzaImage()">Ogórek<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_jalapeno" onclick="updatePizzaImage()">Jalapeno<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_papryka" onclick="updatePizzaImage()">Papryka<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_boczek" onclick="updatePizzaImage()">Bekon<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_oliwka" onclick="updatePizzaImage()">Oliwka<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_salami" onclick="updatePizzaImage()">Salami<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_szynka" onclick="updatePizzaImage()">Szynka<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_kurczak" onclick="updatePizzaImage()">Kurczak<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_ananas" onclick="updatePizzaImage()">Ananas<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_krewetka" onclick="updatePizzaImage()">Krewetki<br>
-      <input type="checkbox" name="s" value="Pizza_skladnik_kebab" onclick="updatePizzaImage()">Kebab<br>
-      <input type="checkbox" name="s" value="Pizza_sos_ostry" onclick="updatePizzaImage()">Sos ostry<br>
-      <input type="checkbox" name="s" value="Pizza_sos_czosnkowy" onclick="updatePizzaImage()">Sos czosnkowy<br>
-      <br>
-      <input type="text" name="deliveryAddress" placeholder="Adres dostawy"><br><br>
-      <button type="submit">Zamów</button>
-    </form>
-  </div>
-  <div id="pizza-image">
-    <div class="ingredient" id="Pizza_ciasto" style="background-image: url('/Pizza_ciasto.svg');"></div>
-    <div class="ingredient" id="Pizza_ser" style="background-image: url('/Pizza_ser.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_pieczarka" style="background-image: url('/Pizza_skladnik_pieczarka.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_pomidor" style="background-image: url('/Pizza_skladnik_pomidor.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_cebula" style="background-image: url('/Pizza_skladnik_cebula.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_ogórek" style="background-image: url('/Pizza_skladnik_ogórek.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_jalapeno" style="background-image: url('/Pizza_skladnik_jalapeno.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_papryka" style="background-image: url('/Pizza_skladnik_papryka.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_boczek" style="background-image: url('/Pizza_skladnik_boczek.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_oliwka" style="background-image: url('/Pizza_skladnik_oliwka.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_salami" style="background-image: url('/Pizza_skladnik_salami.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_szynka" style="background-image: url('/Pizza_skladnik_szynka.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_kurczak" style="background-image: url('/Pizza_skladnik_kurczak.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_ananas" style="background-image: url('/Pizza_skladnik_ananas.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_krewetka" style="background-image: url('/Pizza_skladnik_krewetka.svg');"></div>
-    <div class="ingredient topping" id="Pizza_skladnik_kebab" style="background-image: url('/Pizza_skladnik_kebab.svg');"></div>
-    <div class="ingredient" id="Pizza_sos_ostry" style="background-image: url('/Pizza_sos_ostry.svg');"></div>
-    <div class="ingredient" id="Pizza_sos_czosnkowy" style="background-image: url('/Pizza_sos_czosnkowy.svg');"></div>
-  </div>
+  <article>
+    
+    <div id="pizza_maker">
+      <div id="baner">
+        <h1>Witaj w SnagzPizza!<Br>Zrób swoją pizzę!</h1>
+  
+      </div>
+      <div id="checkbox">
+        <form id="pizza-form" method="POST" action="/SnagzPizza">
+          <label>Składniki do wyboru</label><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_ser" onclick="updatePizzaImage()">
+          <label>Ser żółty</label><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_pieczarka" onclick="updatePizzaImage()">
+          <label>Pieczarki</label><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_pomidor" onclick="updatePizzaImage()">
+          <label>Pomidor</label><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_cebula" onclick="updatePizzaImage()">
+          <label>Cebula</label><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_ogórek" onclick="updatePizzaImage()">
+          <label>Ogórek</label><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_jalapeno" onclick="updatePizzaImage()">
+          <label>Jalapeno</label><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_papryka" onclick="updatePizzaImage()">
+          <label>Papryka</label><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_boczek" onclick="updatePizzaImage()">
+          <label>Bekon</label><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_oliwka" onclick="updatePizzaImage()">
+          <label>Oliwka</label><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_salami" onclick="updatePizzaImage()">
+          <label>Salami</label><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_szynka" onclick="updatePizzaImage()">
+          <label>Szynka</label>><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_kurczak" onclick="updatePizzaImage()">
+          <label>Kurczak</label>><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_ananas" onclick="updatePizzaImage()">
+          <label>Ananas</label>><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_krewetka" onclick="updatePizzaImage()">
+          <label>Krewetki</label>><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_skladnik_kebab" onclick="updatePizzaImage()">
+          <label>Kebab</label>><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_sos_ostry" onclick="updatePizzaImage()">
+          <label>Sos ostry</label>><br>
+          <input class="PIZAcheckbox" type="checkbox" name="s" value="Pizza_sos_czosnkowy" onclick="updatePizzaImage()">
+          <label>Sos czosnkowy</label>><br>
+          <label><strong>Wpisz adres dostawy</strong></label>
+          <input id="adress_box" type="text" name="deliveryAddress" placeholder="Adres dostawy"><br>
+          <button type="submit">Zamów</button>
+        </form>
+      </div>
+      <div id="pizza-image">
+        <div class="ingredient" id="Pizza_ciasto" style="background-image: url('/Pizza_ciasto.svg');"></div>
+        <div class="ingredient" id="Pizza_ser" style="background-image: url('/Pizza_ser.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_pieczarka" style="background-image: url('/Pizza_skladnik_pieczarka.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_pomidor" style="background-image: url('/Pizza_skladnik_pomidor.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_cebula" style="background-image: url('/Pizza_skladnik_cebula.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_ogórek" style="background-image: url('/Pizza_skladnik_ogórek.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_jalapeno" style="background-image: url('/Pizza_skladnik_jalapeno.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_papryka" style="background-image: url('/Pizza_skladnik_papryka.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_boczek" style="background-image: url('/Pizza_skladnik_boczek.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_oliwka" style="background-image: url('/Pizza_skladnik_oliwka.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_salami" style="background-image: url('/Pizza_skladnik_salami.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_szynka" style="background-image: url('/Pizza_skladnik_szynka.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_kurczak" style="background-image: url('/Pizza_skladnik_kurczak.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_ananas" style="background-image: url('/Pizza_skladnik_ananas.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_krewetka" style="background-image: url('/Pizza_skladnik_krewetka.svg');"></div>
+        <div class="ingredient topping" id="Pizza_skladnik_kebab" style="background-image: url('/Pizza_skladnik_kebab.svg');"></div>
+        <div class="ingredient" id="Pizza_sos_ostry" style="background-image: url('/Pizza_sos_ostry.svg');"></div>
+        <div class="ingredient" id="Pizza_sos_czosnkowy" style="background-image: url('/Pizza_sos_czosnkowy.svg');"></div>
+      </div>
+    </div>
+    <footer>
+      <p>2024 - AKSIM</p>
+    </footer>
+  </article>
 
   <script>
     function updatePizzaImage() {
