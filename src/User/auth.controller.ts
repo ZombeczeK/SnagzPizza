@@ -29,16 +29,13 @@ export class AuthController {
       return res.status(HttpStatus.BAD_REQUEST).json({ message: 'Passwords do not match' });
     }
 
-    // Sprawdź, czy użytkownik o podanym loginie już istnieje
     const existingUser = await this.authService.findUser(login);
     if (existingUser) {
       return res.status(HttpStatus.CONFLICT).json({ message: 'User already exists' });
     }
 
-    // Jeśli użytkownik nie istnieje, dokonujemy rejestracji
     const user = await this.authService.register(login, haslo);
 
-    // Po udanej rejestracji przekierowujemy na stronę logowania
     return res.redirect('/auth/login');
   }
 

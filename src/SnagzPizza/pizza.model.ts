@@ -1,7 +1,5 @@
-  // pizza.model.ts
-  
-  export interface Pizza {
+ export interface Pizza {
     id: number;
-    ingredients: string[]; // Id składników pobieranych z bazy danych
+    ingredients: string[];
     deliveryAddress: string;
   }

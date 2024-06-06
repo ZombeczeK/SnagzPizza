@@ -61,7 +61,7 @@
       background-repeat: no-repeat;
       border-bottom: 5px solid #f5e7cc;
 
-      display: flex; /* or use float: left; */
+      display: flex; 
       align-items: center;
     }
     #logo{
@@ -134,28 +134,39 @@
 
       padding-bottom: 20px;
     }
+    #pizza-image{
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      width: 400px;
+      height: 400px;
+      transform: translate(-50%, -50%);
+    }
     .ingredient {
       position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 100%;
       height: 100%;
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      display: none; /* Start with all ingredients hidden */
+      display: none;
     }
     #Pizza_ciasto {
       z-index: 0;
-      display: block; /* Ensure dough is always visible */
+      display: block; 
     }
     #Pizza_ser {
-      z-index: 1; /* Ensure cheese and tomato sauce are beneath other ingredients */
+      z-index: 1; 
     }
     .topping {
-      z-index: 2; /* Regular toppings */
+      z-index: 2; 
     }
     #Pizza_sos_ostry,
     #Pizza_sos_czosnkowy {
-      z-index: 3; /* Spicy and garlic sauces on top */
+      z-index: 3; 
     }
     footer {
       background-color: #f5e7cc;
@@ -228,26 +239,26 @@
           <button type="submit">Zamów</button>
         </form>
       </div>
-      <div id="pizza-image">
-        <div class="ingredient" id="Pizza_ciasto" style="background-image: url('/Pizza_ciasto.svg');"></div>
-        <div class="ingredient" id="Pizza_ser" style="background-image: url('/Pizza_ser.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_pieczarka" style="background-image: url('/Pizza_skladnik_pieczarka.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_pomidor" style="background-image: url('/Pizza_skladnik_pomidor.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_cebula" style="background-image: url('/Pizza_skladnik_cebula.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_ogórek" style="background-image: url('/Pizza_skladnik_ogórek.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_jalapeno" style="background-image: url('/Pizza_skladnik_jalapeno.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_papryka" style="background-image: url('/Pizza_skladnik_papryka.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_boczek" style="background-image: url('/Pizza_skladnik_boczek.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_oliwka" style="background-image: url('/Pizza_skladnik_oliwka.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_salami" style="background-image: url('/Pizza_skladnik_salami.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_szynka" style="background-image: url('/Pizza_skladnik_szynka.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_kurczak" style="background-image: url('/Pizza_skladnik_kurczak.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_ananas" style="background-image: url('/Pizza_skladnik_ananas.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_krewetka" style="background-image: url('/Pizza_skladnik_krewetka.svg');"></div>
-        <div class="ingredient topping" id="Pizza_skladnik_kebab" style="background-image: url('/Pizza_skladnik_kebab.svg');"></div>
-        <div class="ingredient" id="Pizza_sos_ostry" style="background-image: url('/Pizza_sos_ostry.svg');"></div>
-        <div class="ingredient" id="Pizza_sos_czosnkowy" style="background-image: url('/Pizza_sos_czosnkowy.svg');"></div>
-      </div>
+       <div id="pizza-image">
+    <div class="ingredient" id="Pizza_ciasto" style="background-image: url('/Pizza_ciasto.svg');"></div>
+    <div class="ingredient" id="Pizza_ser" style="background-image: url('/Pizza_ser.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_pieczarka" style="background-image: url('/Pizza_skladnik_pieczarka.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_pomidor" style="background-image: url('/Pizza_skladnik_pomidor.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_cebula" style="background-image: url('/Pizza_skladnik_cebula.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_ogórek" style="background-image: url('/Pizza_skladnik_ogórek.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_jalapeno" style="background-image: url('/Pizza_skladnik_jalapeno.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_papryka" style="background-image: url('/Pizza_skladnik_papryka.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_boczek" style="background-image: url('/Pizza_skladnik_boczek.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_oliwka" style="background-image: url('/Pizza_skladnik_oliwka.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_salami" style="background-image: url('/Pizza_skladnik_salami.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_szynka" style="background-image: url('/Pizza_skladnik_szynka.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_kurczak" style="background-image: url('/Pizza_skladnik_kurczak.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_ananas" style="background-image: url('/Pizza_skladnik_ananas.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_krewetka" style="background-image: url('/Pizza_skladnik_krewetka.svg');"></div>
+    <div class="ingredient topping" id="Pizza_skladnik_kebab" style="background-image: url('/Pizza_skladnik_kebab.svg');"></div>
+    <div class="ingredient" id="Pizza_sos_ostry" style="background-image: url('/Pizza_sos_ostry.svg');"></div>
+    <div class="ingredient" id="Pizza_sos_czosnkowy" style="background-image: url('/Pizza_sos_czosnkowy.svg');"></div>
+  </div>
     </div>
     <footer>
       <p>2024 - AKSIM</p>
@@ -257,14 +268,11 @@
   <script>
     function updatePizzaImage() {
       const checkboxes = document.querySelectorAll('input[name="s"]:checked');
-      // Reset all ingredients visibility
       document.querySelectorAll('.ingredient').forEach(ingredient => {
         if (ingredient.id !== 'Pizza_ciasto') {
           ingredient.style.display = 'none';
         }
       });
-
-      // Show selected ingredients
       checkboxes.forEach((checkbox) => {
         const ingredient = checkbox.value;
         document.getElementById(ingredient).style.display = 'block';
