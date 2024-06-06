@@ -143,5 +143,5 @@ były zgodne w aplikacji jak i w bazie danych.</p>
 <li>Filip Jurkiewicz</li>
 <li>Karol Koczwara</li>
 </ul>
-<h3 id="copyright-©-2024-mit-snagzpizza-by-koczwara-s.a.">Copyright © 2024 MIT <em>SnagzPizza</em> by <em>Koczwara S.A.</em></h3>
+<h3 id="copyright-©-2024-mit-snagzpizza-by-koczwara-s.a.">Copyright © 2024 MIT <em>SnagzPizza</em> by <em>Koczwara S.A. Wszelkie prawa zastrzeżone</em></h3>
 
