@@ -157,6 +157,10 @@ haslo: hasło użytkownika
 </p>
 <h2>Diagram bazy danych</h2>
 <img src="snagzpizza (1).png">
+<p>
+Aby połączyć się z bazą danych należy wpisać w cmd polecenie: psql -h localhost -U snagzuser -d snagzpizza <br>
+Aby wyświetlić zawartość tablic należy wpisać:  SELECT * FROM pizza_order INNER JOIN public."user" ON pizza_order.id = public."user".id;
+</p>
 
 <h2 id="twórcy">Twórcy</h2>
 <ul>
