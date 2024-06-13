@@ -9,7 +9,7 @@
 <h2 id="podstawy">Podstawy</h2>
 <p>W frameworku są zawarte:</p>
 <ul>
-<li>moduł logowania,</li>
+<li>moduł logowania i rejestracji,</li>
 <li>menu pizzy,</li>
 <li>kreator pizzy dla zalogowanego użytkownika,</li>
 <li>baza danych przechowująca zamówienia i użytkowników</li>
@@ -137,6 +137,27 @@ były zgodne w aplikacji jak i w bazie danych.</p>
 <p>test coverage</p>
 <pre class=" language-bash"><code class="prism  language-bash">$ <span class="token function">npm</span> run test:cov
 </code></pre>
+<h2>Dokumentacja bazy danych</h2>
+<h3>Tabela pizza_order</h3>
+<p>Tabela zawiera informacje o produktach, adresie dostawy i zalogowanym użytkowniku</p>
+<p>Kolumny:</p>
+<p>
+id (PRIMARY_KEY): ID zamówienia<br>
+ingredients: Składniki <br>
+deliveryAddress: Adres dostawy <br>
+username (FOREIGN_KEY): nazwa użytkownika jako login pobierany z bazy danych "user"
+</p>
+<h3>Tabela user</h3>
+<p>Tabela zawiera informacje o loginie i haśle zarejestrowanych użytkowników</p>
+<p>Kolumny:</p>
+<p>
+id (PRIMARY_KEY): ID użytkownika<br>
+login: login użytkownika <br>
+haslo: hasło użytkownika
+</p>
+
+<img src="snagzpizza (1).png">
+
 <h2 id="twórcy">Twórcy</h2>
 <ul>
 <li>Piotr Ernest</li>
