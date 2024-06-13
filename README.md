@@ -145,7 +145,7 @@ były zgodne w aplikacji jak i w bazie danych.</p>
 id (PRIMARY_KEY): ID zamówienia<br>
 ingredients: Składniki <br>
 deliveryAddress: Adres dostawy <br>
-username (FOREIGN_KEY): nazwa użytkownika jako login pobierany z bazy danych "user"
+username (FOREIGN_KEY): nazwa użytkownika jako login pobierany z bazy danych user.login z użyciem relacji wiele-do-jednego 
 </p>
 <h3>Tabela user</h3>
 <p>Tabela zawiera informacje o loginie i haśle zarejestrowanych użytkowników</p>
@@ -155,7 +155,7 @@ id (PRIMARY_KEY): ID użytkownika<br>
 login: login użytkownika <br>
 haslo: hasło użytkownika
 </p>
-
+<h2>Diagram bazy danych</h2>
 <img src="snagzpizza (1).png">
 
 <h2 id="twórcy">Twórcy</h2>
