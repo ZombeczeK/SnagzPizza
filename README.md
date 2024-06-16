@@ -164,7 +164,7 @@ były zgodne w aplikacji jak i w bazie danych.</p>
 <li>ingredient_id (FOREIGN_KEY): ID składnika z tabeli <code>ingredient</code></li>
 </ul>
 <h2 id="diagram-bazy-danych">Diagram bazy danych</h2>
-<p><img src="https://stackedit.io/snagzpizza%20(1).png" alt=""></p>
+<p><img src="snagzpizza (2).png" alt=""></p>
 <h2 id="opis-tabel-i-relacji">Opis tabel i relacji</h2>
 <ul>
 <li>
